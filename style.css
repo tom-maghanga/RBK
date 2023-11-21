@@ -88,9 +88,13 @@ html, body{
     display: flex;
     background-color: #ce1b22;
     border-radius: 25px;
-    width: 100px;
+    width: auto;
     height: auto;
     justify-content: center;
+}
+
+.text-red{
+    color: #ce1b22 !important;
 }
 
 .quick{
@@ -267,35 +271,7 @@ html, body{
   }
   
 
-  /* .footer{
-    color: white;
-    padding: 20px;
-    background-color: #ce1b22;
-    height: 250px;
-    width: 100%;
-  }
-
-  .footer-row{
-    display: flex;
-    justify-content: space-between;
-  }
-
-.follow{
-    text-decoration: none;
-}
-
-  .location,
-.information,
-.connect {
-  flex: 0 0 30%;
-  max-width: 30%; 
-}
-
-
-.footer-logo{
-    width: 90px;
-} */
-
+  
 
 /*** Footer ***/
 .footer {
