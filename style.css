@@ -1,0 +1,184 @@
+html, body{
+    font-family: 'Arial', sans-serif;
+
+}
+
+
+
+  .top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .separator{
+    color: #ce1b22;
+    margin: 30px;
+  }
+
+.custom-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    
+}
+.custom-icon svg{
+    fill: #ce1b22;
+    border-color: #ce1b22;
+}
+
+.icon-text{
+    color: #ce1b22;
+    font-size: 0.9rem;
+}
+
+/*LOGO SECTION */
+
+  
+  .container {
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .logo-section {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr; /* Define six columns: 1 column for the logo, 2 columns for the search, 3 columns for the top links */
+    gap: 10px; 
+    align-items: center;
+  }
+  
+  .logo {
+    max-width: 75%; /* Make sure the logo doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio of the logo */
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding-right: 10px;
+    padding-left: 10px;
+    justify-content: space-between;
+    width: 75%;
+    border-radius: 20px;
+    border: 1px solid #dbdbdb;
+    height: 45%;
+  }
+
+
+
+  .search input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+  }
+  
+  .search p {
+    margin-right: 10px; 
+    text-align: center;
+  }
+  
+  .search-icon {
+    max-width: 100%;
+    height: auto; 
+  }
+
+  .enquiry{
+    display: flex;
+    background-color: #ce1b22;
+    border-radius: 25px;
+    width: 100px;
+    height: auto;
+    justify-content: center;
+}
+
+.quick{
+    padding-top: 5px;
+    font-size:12px;
+    color: white;
+    text-align: center;
+}
+  
+  .top-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    
+  }
+  
+  .enquiry, .signin, .register {
+    margin-left: 10px; /* Add some spacing between the top links */
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Set the text color */
+  }
+
+
+/*end of logo section*
+
+
+/*start of navigation menu */
+.navbar{
+    background-color: #ce1b22;
+    width: 100%;
+    height: 65px;
+    margin-top: 10px;
+}
+
+
+/* Set text color to white */
+.top-bar .navbar-brand {
+    color: white;
+    font-size: medium;
+  }
+  
+  /* Limit the total width of the container to 900px */
+  .top-bar .container {
+    max-width: 900px;
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Make words break into two lines if more than two */
+  .nav-container .navbar-brand {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  /* Add margin between navbar-brand items */
+  .top-bar .navbar-brand:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+
+  /*end o f navigation*/
+
+
+
+  /*hero section */
+
+  .hero{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    margin-top: -50px;
+    background-color: #ce1b22;
+    height: 250px;
+  }
+  .hero-text{
+    flex: 1;
+    color: #f8f8f8;
+    text-align: center;
+  }
+
+  .hero-text h2{
+    font-weight: bold;
+  }
+
+  .hero-image img{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
