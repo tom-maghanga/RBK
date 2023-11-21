@@ -42,7 +42,7 @@ html, body{
   
   .logo-section {
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr; /* Define six columns: 1 column for the logo, 2 columns for the search, 3 columns for the top links */
+    grid-template-columns: 1fr 3fr 2fr; 
     gap: 10px; 
     align-items: center;
   }
@@ -182,3 +182,193 @@ html, body{
     justify-content: flex-end;
     max-width: 100%;
   }
+
+    /* end of hero section */
+    .products{
+        margin-top: 25px;
+        text-align: center;
+        width: 1000px;
+        
+    }
+
+    .products h1{
+        color: #ce1b22;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+
+
+
+      /*all section */
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    border: none;
+    position: relative;
+}
+.card {
+    position: relative;
+    margin-bottom: 20px; 
+  }
+
+.btn-custom{
+    display: inline-block;
+    color: #ce1b22;
+    border: 1px solid #ce1b22;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-colour 0.3s, color 0.3s;
+    height: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+.btn-custom:hover{
+    background-color: #ce1b22;
+    color: white;
+}
+
+.btn-custom {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+
+  /*carousel */
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel {
+    display: flex;
+    animation: scroll 10s linear infinite; 
+  }
+
+  .client-logo {
+    width: 150px;
+    margin: 110px;
+    height: 50px;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+  /* .footer{
+    color: white;
+    padding: 20px;
+    background-color: #ce1b22;
+    height: 250px;
+    width: 100%;
+  }
+
+  .footer-row{
+    display: flex;
+    justify-content: space-between;
+  }
+
+.follow{
+    text-decoration: none;
+}
+
+  .location,
+.information,
+.connect {
+  flex: 0 0 30%;
+  max-width: 30%; 
+}
+
+
+.footer-logo{
+    width: 90px;
+} */
+
+
+/*** Footer ***/
+.footer {
+    background-color: #ce1b22;
+    background-size: contain;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid rgba(256, 256, 256, .1);
+    border-radius: 40px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: white
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: left;
+    color:white;
+    font-weight: normal;
+    transition: .3s;
+}
+
+.footer .btn.btn-link:hover {
+    color: #FFFFFF;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 14px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: white
+}
+
+.footer .copyright a:hover {
+    color: #FFFFFF;
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid  white;
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
