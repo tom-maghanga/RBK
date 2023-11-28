@@ -225,9 +225,10 @@ html, body{
 
     /* end of hero section */
     .products{
-        margin-top: 25px;
+        margin-top: 45px;
         text-align: center;
-        width: 1000px;
+        width: 1200px;
+        background: linear-gradient(to bottom, #ffffff, #f8f4f4);
         
     }
 
@@ -241,21 +242,29 @@ html, body{
 
       /*all section */
 .row{
+  margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+   flex-direction: row;
+   justify-content: center;
 }
 .card{
-    width: 200px;
+    width: 250px;
     height: 250px;
     margin: 10px;
     border: none;
     position: relative;
-    background: linear-gradient(to bottom, #ffffff, #faf2f2);
+    background: linear-gradient(to bottom, #ffffff, #f8f4f4);
 
 }
 .card {
     position: relative;
     margin-bottom: 20px; 
+  }
+  .card-img-top{
+    max-width: 75%;
+    max-height: 75%;
+    width: auto;
+    height: auto;
   }
 
 
@@ -516,6 +525,7 @@ margin-left: 20px;
   width: 100%;
   padding: 0, 100px,0,100px;
   margin-bottom: 40px;
+  
 }
 
 .image {
