@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
 
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
     <!-- TOP MENU -->
-    <section class="top-bar navbar-expand-lg shadow-sm p-3 mb-5 bg-white rounded">
+    <section class="top-bar navbar-expand-lg shadow-sm-sm p-3 mb-5 bg-white rounded">
         <div class="container text-center">
           <!-- Phone SVG icon -->
         <img src="/img/phone.svg" alt="Phone" class="custom-icon">
@@ -33,25 +37,28 @@
 
 
     <!-- LOGO & SIGN IN -->
-    <section class="container logo-section">
-       <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
-        <div class="search">
-            <input type="text" name="" id="" placeholder="Search">
-           
-            <img src="/img/search.png" alt="" class="search-icon">
-        </div>
-        <div  class="top-links">
-        <a href="#" class="enquiry btn "><span class="quick">QUICK ENQUIRY</span></a>
-        <a href="#" class="signin ">Sign In</a> 
-        <a href="" class="register text-red">Register</a>
-        </div>
-    </section>
+   <section class="container logo-section ">
+  <div class="logo-container">
+    <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
+
+    <div class="search">
+      <input type="text" name="" id="" placeholder="Search">
+      <img src="/img/search.png" alt="" class="search-icon">
+    </div>
+
+    <div class="ml-auto">
+      <a href="#" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+      
+    </div>
+    <a href="" class="portfolio btn text-red"><span class="port">Portfolio</span></a>
+  </div>
+</section>
     
     <!-- LOGO & SIGN IN -->
 
 
      <!-- NAV -->
-     <section class="top-bar navbar navbar-expand-lg shadow p-3 mb-5 ">
+     <section class="top-bar navbar navbar-expand-lg shadow-sm p-3 mb-5 ">
         <div class="container nav-container text-center">
             <a class="navbar-brand" href="#">Digital <br>Printing</a>
             <a class="navbar-brand" href="#">Large Format <br>Printing</a>
@@ -85,97 +92,97 @@
                    <h1>BROWSE POPULAR CATEGORIES</h1>
 
                    <div class="row">
-                        <div class="card shadow " >
+                        <div class="card  " >
                             <img class="card-img-top" src="/img/hoodie.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/hoodies.html" class="btn btn-custom">HOODIES</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/mug.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="product_pages/mugs.html" class="btn btn-custom">CUP | MUGS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/business-card.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="product_pages/business-cards.html" class="btn btn-custom">BUSINESS CARDS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/totte.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="product_pages/totte.html" class="btn btn-custom">TOTTE BAGS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/x-banner.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/banners.html" class="btn btn-custom">X-BANNERS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/t-shirt.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="product_pages/t-shirt.html" class="btn btn-custom">T-SHIRTS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/pen.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/pens.html" class="btn btn-custom">PENS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/notebook.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="product_pages/notebook.html" class="btn btn-custom">NOTEBOOKS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/watter-bottle.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/water-bottles.html" class="btn btn-custom">WATER BOTTLES</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/polo.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="product_pages/polo.html" class="btn btn-custom">POLOS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/rubber-stamp.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/rubber-stamp.html" class="btn btn-custom">RUBBER STAMPS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/umbrella.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/umbrella.html" class="btn btn-custom">UMBRELLAS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/tear-drop-banner.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/teardrop.html" class="btn btn-custom">TEAR DROP BANNERS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/t-shirt.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/t-shirt.html" class="btn btn-custom">T-SHIRTS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/caps.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/caps.html" class="btn btn-custom">CAPS</a>
                                 </div>
                         </div>
-                        <div class="card shadow " >
+                        <div class="card shadow-sm " >
                             <img class="card-img-top" src="/img/diaries.png" alt="Card image cap">
                                 <div class="card-body">
                                 <a href="/product_pages/diaries.html" class="btn btn-custom">DIARIES</a>
@@ -190,22 +197,20 @@
 
 
   <!-- CLIENT LOGO-->
-  <section class="container products ">
-    <h1>CLIENTELLE</h1>
-
-    <div class="carousel-container shadow">
-        <div class="carousel">
-          <div class="client-logo"><img src="/img/kebs.png" alt="Logo 1"></div>
-          <div class="client-logo"><img src="/img/kenyatta.png" alt="Logo 2"></div>
-          <!-- <div class="client-logo"><img src="/img/pharma.jpeg" alt="Logo 3"></div> -->
-          <div class="client-logo"><img src="/img/kebs.png" alt="Logo 5"></div>
-          <!-- <div class="client-logo"><img src="/img/solar.png" alt="Logo 4"></div> -->
-        
-        </div>
-      </div>
-      
-    </div>
+  <div class="container">
+    <h2>CLIENTELLE</h2>
+    <section class="customer-logos slider">
+          <div class="slide"><img src="/img/kebs.png" alt="Logo 1"></div>
+          <div class="slide"><img src="/img/pharma.png" alt="Logo 3"></div>
+          <div class="slide"><img src="/img/kebs.png" alt="Logo 5"></div>
+          <div class="slide"><img src="/img/solar.png" alt="Logo 4"></div>
+          <div class="slide"><img src="/img/kebs.png" alt="Logo 1"></div>
+          <div class="slide"><img src="/img/pharma.png" alt="Logo 3"></div>
+          <div class="slide"><img src="/img/kebs.png" alt="Logo 5"></div>
+          <div class="slide"><img src="/img/solar.png" alt="Logo 4"></div>
     </section>
+
+    </div>
   <!-- CLIENT LOGO-->
 
 <footer class=" footer">
@@ -242,4 +247,5 @@
 </footer>
 
 </body>
+
 </html>
