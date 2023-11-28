@@ -106,6 +106,7 @@ html, body{
   background-color: #333 !important;
 }
 
+
 .text-red{
     color: #ce1b22 !important;
 }
@@ -248,6 +249,9 @@ html, body{
    justify-content: center;
 }
 .card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
     width: 250px;
     height: 250px;
     margin: 10px;
@@ -261,6 +265,7 @@ html, body{
     margin-bottom: 20px; 
   }
   .card-img-top{
+
     max-width: 75%;
     max-height: 75%;
     width: auto;
@@ -573,3 +578,66 @@ margin-left: 20px;
   height: 30px;
   margin-right: 0px;
 }
+
+
+
+
+/*** Services CSS **/
+.enquiry-services{
+  color: #dbd6d6;
+  display: flex;
+  background-color: #ce1b22;
+  border-radius: 25px;
+  width: auto;
+  height: auto;
+  justify-content: center;
+}
+
+
+.enquiry-services:hover{
+background-color: #333 !important;
+}
+.service-header{
+  font-weight: 600;
+  color: #ce1b22;
+}
+.description{
+  font-size: 1.2rem;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.enquiry-bottom{
+
+  color: #dbd6d6;
+  display: flex;
+  background-color: #333;
+
+  border-radius: 25px;
+  width: 20%;
+  height: auto;
+  justify-content: center;
+}
+.quick-text{
+  color: #fff;
+  text-align: center;
+
+}
+
+.bottom-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.enquiry-bottom:hover {
+  background-color: #ce1b22;
+
+}
+.talk{
+  color: #ce1b22;
+}
+
+/**END SERVICES***/
