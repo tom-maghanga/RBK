@@ -14,6 +14,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="/node_modules/standalone-whatsapp-widget/dist/js/standalone-whatsapp-widget.min.js"></script>
+    <script>
+        function openWhatsAppChat() {
+            // Get form data
+            var product = document.querySelector('select[name="shred-info"]').value;
+            var pieces = document.getElementById('lname').value;
+            var printType = document.getElementById('email').value; // Assuming 'email' is the correct ID for printType
+            var deliveryDate = document.getElementById('date').value;; // Replace with the correct ID for the deliveryDate input field and get its value
+    
+            // Construct the WhatsApp message
+            var message = "Product: " + product + "\n"
+            + "Number of pieces: " + pieces + "\n"
+            + "Print Type: " + printType + "\n"
+            + "Delivery Date: " + deliveryDate;
+
+                                        
+            // Replace the phone number with the actual phone number you want to open the chat with
+            var phoneNumber = '+254729833007'; // Include the country code
+    
+            // Open WhatsApp desktop app manually with the pre-filled message
+            window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message), '_blank');
+        }
+    </script>
 
     <script src="main.js"></script>
 </head>
@@ -28,7 +50,7 @@
 
         <!-- WhatsApp SVG icon -->
         <img src="/img/whatsapp.svg" alt="WhatsApp" class="custom-icon">
-        <span class="icon-text">WHATSAPP US</span>
+        <span class="icon-text" >WHATSAPP US</span>
         <span class="separator">|</span>
 
         <!-- Email SVG icon -->
@@ -213,7 +235,7 @@
           <div class="slide"><img src="/img/defense.png" alt="Logo 1"></div>
           <div class="slide"><img src="/img/detal.png" alt="Logo 1"></div>
           <div class="slide"><img src="/img/direct.png" alt="Logo 1"></div>
-          <div class="slide"><img src="/img/grass.png'" alt="Logo 1"></div>
+          <div class="slide"><img src="/img/grass.png" alt="Logo 1"></div>
           <div class="slide"><img src="/img/kariuki.png" alt="Logo 1"></div>
           <div class="slide"><img src="/img/nairobi.png" alt="Logo 1"></div>
           <div class="slide"><img src="/img/kebs.png" alt="Logo 1"></div>

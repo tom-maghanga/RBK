@@ -1,0 +1,341 @@
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Quote</title>
+                                <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+                                <style>
+                                body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background: linear-gradient(-45deg, #ce1b22 50%, #393c41 50%);
+    background-repeat: no-repeat
+}
+
+.card {
+    background-color: #EEEEEE;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    z-index: 0
+}
+
+.btn-custom{
+    display: inline-block;
+    color: #ce1b22;
+    border: 1px solid #ce1b22;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-colour 0.3s, color 0.3s;
+    height: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.btn-custom-1{
+    display: inline-block;
+    background-color: #ce1b22;
+   color: #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-colour 0.3s, color 0.3s;
+    height: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.heading {
+    font-weight: normal
+}
+
+.desc {
+    font-size: 14px
+}
+
+#progressbar {
+   
+    overflow: hidden;
+    color: lightgrey;
+    padding-left: 0px
+}
+
+#progressbar .active {
+    color: #673AB7
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar .step0:before {
+    content: ""
+}
+
+#progressbar li:before {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    background: #E0E0E0;
+    border-radius: 50%;
+    margin: auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: #E0E0E0;
+    position: absolute;
+    left: 0;
+    top: 17px;
+    z-index: -1
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #F9A825
+}
+
+.sub-heading {
+    font-weight: 500
+}
+
+.yellow-text {
+    color: #F9A825
+}
+
+fieldset.show {
+    display: block
+}
+
+fieldset {
+    display: none
+}
+
+.radio {
+    display: inline-block;
+    border-radius: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #BDBDBD;
+    font-weight: 500;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%)
+}
+
+.radio:hover {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.radio.selected {
+    border: 1px solid #F9A825;
+    box-shadow: 0px 8px 16px 0px #EEEEEE;
+    color: #29B6F6 !important;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%)
+}
+
+.card-block {
+    border: 1px solid #CFD8DC;
+    width: 45%;
+  
+ 
+}
+
+@media screen and (max-width: 768px) {
+    .card-block {
+       
+        height: 20px
+    }
+}
+
+.icon {
+    width: 85px;
+    height: 100px
+}
+
+.image-icon {
+    width: 85px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px
+}
+
+select,
+input,
+textarea,
+button {
+    padding: 8px 15px 8px 15px;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid skyblue !important;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+textarea {
+    height: 100px
+}
+
+button {
+    width: 120px;
+    letter-spacing: 2px
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.btn-block {
+    border-radius: 5px;
+    height: 50px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.fa-long-arrow-right {
+    float: right;
+    margin-top: 4px
+}
+
+.fa-long-arrow-left {
+    float: left;
+    margin-top: 4px
+
+}</style>
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+                                <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+                                <script>
+                                    function openWhatsAppChat() {
+                                        // Get form data
+                                        var product = document.querySelector('select[name="shred-info"]').value;
+                                        var pieces = document.getElementById('lname').value;
+                                        var printType = document.getElementById('email').value; // Assuming 'email' is the correct ID for printType
+                                        var deliveryDate = document.getElementById('date').value;; // Replace with the correct ID for the deliveryDate input field and get its value
+                                
+                                        // Construct the WhatsApp message
+                                        var message = "Product: " + product + "\n"
+                                        + "Number of pieces: " + pieces + "\n"
+                                        + "Print Type: " + printType + "\n"
+                                        + "Delivery Date: " + deliveryDate;
+
+                                                                    
+                                        // Replace the phone number with the actual phone number you want to open the chat with
+                                        var phoneNumber = '+254729833007'; // Include the country code
+                                
+                                        // Open WhatsApp desktop app manually with the pre-filled message
+                                        window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message), '_blank');
+                                    }
+                                </script>
+                                
+                                
+                            </head>
+                            <body oncontextmenu='return false' class='snippet-body'>
+                                <div class="container-fluid px-1 py-5 mx-auto">
+                                    <div class="container">
+                                        <div class="row d-flex justify-content-center">
+                                            <div class="col-xl-5 col-lg-6 col-md-7">
+                                                <div class="card b-0">
+                                                    <h3 class="heading">Request a Quote</h3>
+                                                    <p class="desc">Fill out the form or call <span class="yellow-text">+254 729 833 007</span> to get your quote now!</p>
+                                                    <ul id="progressbar" class="text-center">
+                                                        <!-- Add your progress bar steps here -->
+                                                    </ul>
+                                                    <fieldset class="show">
+                                                        <div class="form-card">
+                                                            <h5 class="sub-heading mb-4">Personal Details</h5>
+                                                            <label class="text-danger mb-3">* Required</label>
+                                                            <div class="select mb-3">
+                                                                <label class="form-control-label">Product/Service * :</label>
+                                                                <select name="shred-info" class="form-control">
+                                                                   
+                                                                    <option>Choose a Product</option>
+                                                                    <option>Large Format Printing</option>
+                                                                    <option>Digital Printing</option>
+                                                                    <option>UV Flatbed Printing</option>
+                                                                    <option>Sublimation & Doming</option>
+                                                                    <option>Other</option>
+                                                                </select>
+                                                            </div>
+                                                          
+                                                            <div class="form-group">
+                                                                <label class="form-control-label">Number of pieces * :</label>
+                                                                <input type="text" id="lname" name="lname" placeholder="" class="form-control" onblur="validate1(2)">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="form-control-label">How do you want it printed ? * :</label>
+                                                                <input type="text" id="email" name="email" placeholder="" class="form-control" onblur="validate1(3)">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="form-control-label">When do you want it delivered? :</label>
+                                                                <input type="text" id="date" name="email" placeholder="" class="form-control" onblur="validate1(3)">
+                                                                
+                                                            </div>
+                                                            <button id="submitBtn" class="btn-block btn-custom-1 mt-3 mb-1 next mt-4" onclick="openWhatsAppChat()">SUBMIT REQUEST<span class="fa fa-long-arrow-right"></span></button>
+                                                        </button> <button class="btn-block  btn-custom mt-3 mb-1 prev"><span class="fa fa-long-arrow-left"></span><a style="text-decoration: none; color: #ce1b22;" href="/Index.html">Go Back Home</a></button>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Include your CSS and JS libraries here -->
+                            </body>
+                        </html>
