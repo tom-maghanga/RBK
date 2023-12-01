@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="/bootstrap.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
+    <script>
+        function openWhatsAppForOrder() {
+            // Get product details
+            var productName = document.querySelector('.product-header').innerText;
+
+            // Construct the WhatsApp message
+            var message = "Ordering " + productName;
+
+            // Replace the phone number with the actual phone number you want to open the chat with
+            var phoneNumber = '+254729833007'; // Include the country code
+
+            // Open WhatsApp chat in a new tab
+            window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message), '_blank');
+        }
+
+        function openEmailForOrder() {
+            // Get product details
+            var productName = document.querySelector('.product-header').innerText;
+
+            // Construct the email subject
+            var subject = "Ordering " + productName;
+
+            // Replace the email address with the actual email address you want to open
+            var emailAddress = 'redberylkenya@gmail.com';
+
+            // Open default email client with pre-filled subject
+            window.location.href = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject);
+        }
+    </script>
 
 </head>
 <body>
@@ -85,16 +114,16 @@
                 Heat Transfer<br>
                </p>
 
-                <div class="buttons">
-                    <button class="product_btn" type="submit">
-                        <img src="/whatsapp.svg" class="custom-order-icon" srcset="">
-                        Order via Whatsapp
-                    </button>
-                    <button class="product_btn" type="submit">
-                        <img src="/email.svg" class="custom-order-icon" srcset="">
-                        Order via Email
-                    </button>
-                </div>
+               <div class="buttons">
+                <button class="product_btn" type="submit" onclick="openWhatsAppForOrder()">
+                    <img src="/whatsapp.svg" class="custom-order-icon" srcset="">
+                    Order via Whatsapp
+                </button>
+                <button class="product_btn" type="submit" onclick="openEmailForOrder()">
+                    <img src="/email.svg" class="custom-order-icon" srcset="">
+                    Order via Email
+                </button>
+            </div>
         </div>    
        
     </div>
