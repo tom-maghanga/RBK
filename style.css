@@ -128,14 +128,15 @@ html, body{
   .enquiry, .signin, .portfolio {
     margin-left: 10px; /* Add some spacing between the top links */
     text-decoration: none; /* Remove underlines from links */
-    color: #333; /* Set the text color */
+    color: #111111; /* Set the text color */
   }
 
   .portfolio{
-    color: #dbd6d6;
+    color: #111111 !important;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #333;
+    background-color: none;
+    border: #ce1b22 1px solid;
     display: flex;
     border-radius: 25px;
     width: auto;
@@ -143,9 +144,12 @@ html, body{
     justify-content: center;
   }
   .port{
-    color: #dbdbdb;
+    color: #111111;
   }
+  .port:hover{
+    color: #fff;
 
+  }
   .portfolio:hover{
     background-color: #ce1b22;
   }
@@ -305,13 +309,18 @@ html, body{
     color: #ce1b22;
   }
   /* Slider */
+
+
   
   .slick-slide {
       margin: 0px 20px;
+      
   }
   
   .slick-slide img {
-      width: 100%;
+      
+      height: 50px;
+      width: auto;
   }
   
   .slick-slider
