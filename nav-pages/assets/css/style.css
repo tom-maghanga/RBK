@@ -1,9 +1,9 @@
 /*===========================
     01. Common CSS
 ===========================*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight: normal;
   font-style: normal;
   overflow-x: hidden;
