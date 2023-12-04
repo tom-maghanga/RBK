@@ -649,4 +649,24 @@ background-color: #333 !important;
   color: #ce1b22;
 }
 
+
+.card {
+  position: relative;
+}
+
+.enquiry-services.btn {
+  position: absolute;
+  bottom: 10px; 
+  width: 100%;
+  text-align: center; 
+  margin-left: -120px;
+  color: #fff;
+}
+
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+
 /**END SERVICES***/
