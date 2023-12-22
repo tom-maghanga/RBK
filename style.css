@@ -452,11 +452,11 @@ footer-row {
 .footer-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  margin-top: -20px;
 }
 
 .footer-logo {
+  display: flex;
   width: 100px; /* Adjust the size as needed */
   height: auto;
   margin-right: 10px; /* Adjust the spacing as needed */
@@ -465,9 +465,31 @@ footer-row {
 .location,
 .information,
 .connect {
-  flex-basis: calc(33.3333% - 20px); /* Adjust the width and spacing as needed */
-  text-align: left;
-  margin-bottom: 20px; /* Adjust the spacing between rows as needed */
+  flex-basis: calc(25% - 20px); /* Adjust the width and spacing as needed */
+    box-sizing: border-box;
+    padding: 10px;
+    align-items: baseline;
+}
+
+.connect h4 {
+  margin-bottom: 10px; /* Remove default margin-bottom for h4 elements */
+}
+
+.connect br {
+  display: none; /* Hide line breaks */
+}
+
+/* Additional styling for links and paragraphs within .connect if needed */
+.connect a {
+  color: #007bff; /* Blue color for links */
+}
+
+.connect a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+.connect .footer-head {
+  font-weight: bold; /* Make the .footer-head text bold */
 }
 
 .location h4
@@ -482,7 +504,7 @@ footer-row {
   margin-bottom: 10px;
 }
 .connect h4{
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 1.2rem;
 }
 
@@ -519,9 +541,6 @@ margin-left: 20px;
   margin-left: 15px;
 }
 
-.connect{
-  margin-bottom: 10px;
-}
 
 .footer-line{
   color: #fff;
@@ -673,3 +692,8 @@ background-color: #333 !important;
 
 
 /**** FOOTER ****/
+
+
+.common-btn{
+  background-color: #ce1b22;
+}
