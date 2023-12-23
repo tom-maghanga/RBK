@@ -22,58 +22,96 @@
         <img src="/img/phone.svg" alt="Phone" class="custom-icon">
         <span class="icon-text">+254 729 833 007 | +254 780 833 007</span>
         <span class="separator">|</span>
-
+  
         <!-- WhatsApp SVG icon -->
-        <img src="/img/whatsapp.svg" alt="WhatsApp" class="custom-icon">
-        <span class="icon-text">WHATSAPP US</span>
+        <span>
+          <img src="/img/whatsapp.svg" alt="WhatsApp" class="custom-icon">
+        <span class="icon-text" >WHATSAPP US</span>
         <span class="separator">|</span>
-
+        </span>
+  
         <!-- Email SVG icon -->
-        <img src="/img/email.svg" alt="Email" class="custom-icon">
-        <span class="icon-text">EMAIL US</span>
+        <img src="/img/email.svg" alt="Email"  class="email custom-icon">
+        <span class="email" class="icon-text">EMAIL US</span>
         </div>
     </section>
-
+  
     <!-- TOP MENU -->
-
-
-    <!-- LOGO & SIGN IN -->
-   <section class="container logo-section ">
-  <div class="logo-container">
-    <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
-
-    <div class="search">
-      <input type="text" name="" id="" placeholder="Search">
-      <img src="/img/search.png" alt="" class="search-icon">
+  
+  
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
-
-    <div class="ml-auto">
-      <a href="#" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
-      
-    </div>
-    <a href="" class="portfolio btn text-red"><span class="port">Portfolio</span></a>
-  </div>
-</section>
+     <section class="logo-wrapper">
+         <!-- LOGO & SIGN IN -->
+      <section class="container logo-section ">
+        <div class="logo-container">
+        <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
     
-    <!-- LOGO & SIGN IN -->
-
-
-     <!-- NAV -->
-     <section class="top-bar navbar navbar-expand-lg shadow-sm p-3 mb-5 ">
-        <div class="container nav-container text-center">
-            <a class="navbar-brand" href="digital.html">Digital <br>Printing</a>
-            <a class="navbar-brand" href="large.html">Large Format <br>Printing</a>
-            <a class="navbar-brand" href="flatbed.html">UV Flatbed <br>Printing</a>
-            <a class="navbar-brand" href="engrave.html">Engraving <br>Fiber/CO2</a>
-            <a class="navbar-brand" href="embroidery.html">Embroidery <br>Services</a>
-            <a class="navbar-brand" href="sublimation.html">Sublimation <br>& Doming</a>
-            <a class="navbar-brand" href="catalogue.html">Catalogue</a>
-            <a class="navbar-brand" href="gallery.html">Gallery</a>        
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search">
+            <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+        </div>
+    
+        <div class="ml-auto">
+            <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+            
+        </div>
+        <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
         </div>
     </section>
-
-    <!-- NAV -->
-
+  
+     </section>
+  <!-- LOGO & SIGN IN -->
+     <!-- NAV -->
+     <div class="top-bar top-bar-1 navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+           
+      <div class="  container nav-container text-center">
+          <a class="navbar-brand" href="../nav-pages/digital.html">Digital <br>Printing</a>
+          <a class="navbar-brand" href="../nav-pages/large.html">Large Format <br>Printing</a>
+          <a class="navbar-brand" href="../nav-pages/flatbed.html">UV Flatbed <br>Printing</a>
+          <a class="navbar-brand" href="../nav-pages/engrave.html">Engraving <br>Fiber/CO2</a>
+          <a class="navbar-brand" href="../nav-pages/embroidery.html">Embroidery <br>Services</a>
+          <a class="navbar-brand" href="../nav-pages/sublimation.html">Sublimation <br>& Doming</a>
+          <a class="navbar-brand" href="../nav-pages/catalogue.html">Catalogue</a>
+          <a class="navbar-brand" href="../nav-pages/gallery.html">Gallery</a>        
+      </div>
+  </div>
+  
+    <div class="top-bar nav-menu-sm   navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+           <!-- LOGO & SIGN IN -->
+        <section class=" logo-section justify-content-center ">
+            <div class="logo-container">
+            <a href="/"> <img src="/img/logo_mob.png" alt="" class="logo"></a>
+        
+            <!-- <div class="search">
+                <input type="text" id="searchInput" placeholder="Search">
+                <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+            </div> -->
+        
+            <!-- <div class="ml-auto"> -->
+                <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+                <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
+                
+            <!-- </div> -->
+            </div>
+        </section>
+      
+      <!-- LOGO & SIGN IN -->
+  
+      <div class=" nav-menu justify-content-start container nav-container text-center">
+          <a class="navbar-brand" href="../nav-pages/digital.html">Digital Printing</a>
+          <a class="navbar-brand" href="../nav-pages/large.html">Large Format Printing</a>
+          <a class="navbar-brand" href="../nav-pages/flatbed.html">UV Flatbed Printing</a>
+          <a class="navbar-brand" href="../nav-pages/engrave.html">Engraving Fiber/CO2</a>
+          <a class="navbar-brand" href="../nav-pages/embroidery.html">Embroidery Services</a>
+          <a class="navbar-brand" href="../nav-pages/sublimation.html">Sublimation & Doming</a>
+          <a class="navbar-brand" href="../nav-pages/catalogue.html">Catalogue</a>
+          <a class="navbar-brand" href="../nav-pages/gallery.html">Gallery</a>        
+      </div>
+  </div>
 
      
     <div class="container-fluid tm-container-content tm-mt-60">
@@ -123,38 +161,49 @@
    </div>
    
 
-        <footer class=" footer">
-            <section class=" container footer-row row">
-                <div class="location">
-                    <img src="img/white.png" class="footer-logo" alt="" srcset="">
-                    <h4>REDBERYL KENYA</h4>
-                    <p>MITIHANI HSE 2ND FLOOR,<br>
-                        MFANGANO STREET, NRB
-                    </p>
-                    <hr class="footer-line">
-                    <p>
-                    info@redberylkenya.com <br>
-                    redberylkenya@gmail.com <br>
-                    +254 729 833 007 <br>
-                    </p>
+   <footer class=" footer" style=" ">
+    <section class=" container footer-row row">
+        <div class="location">
+            <img src="../img/logo.png" class="footer-logo" alt="" srcset="">
+
+           
+            <hr class="footer-line">
+            <p>
+            info@redberylkenya.com <br>
+            redberylkenya@gmail.com <br>
+            +254 729 833 007 <br>
+            </p>
+
+        </div>
+         <div class="connect">
+            <h4>OFFICES</h4>
+            <br>
+            MITIHANI HSE 1ST FLOOR,<br>
+            MFANGANO STREET, NRB
+        </div>
+
+        <div class="connect">
+            <h4>INFORMATION</h4>
+            <br>
+            <a href="" class="info-text">ABOUT US</a> <br>
+            <a href="" class="info-text">OUR WORK</a> <br>
+            <a href="" class="info-text">NEWSLETTER</a>
+        </div>  
         
-                </div>
-                <div class="information">
-                    <h4>INFORMATION</h4>
-                    <a href="" class="about info-text">ABOUT US</a> <br>
-                    <a href="" class="our-work info-text">OUR WORK</a> <br>
-                    <a href="" class="newsletter info-text">NEWSLETTER</a>
-                </div>
+        <div class="connect">
+            <h4>CONNECT</h4>
+            <br>
+            <a href="https://www.facebook.com/RedberylKenya" class="info-text">facebook</a> <br>
+            <a href="https://www.instagram.com/redberyl_kenya/" class="info-text">instagram</a> <br>
+            <a href="https://twitter.com/RedberylKenya" class="info-text">twitter</a>
+        </div>
+
+       
+       
         
-                <div class="connect">
-                    <h4>CONNECT</h4>
-                    <a href="https://www.facebook.com/RedberylKenya" class="facebook follow">follow_us</a> <br>
-                    <a href="https://www.instagram.com/redberyl_kenya/" class="ig follow">follow_us</a> <br>
-                    
-                </div>
-            </section>
-        
-        </footer>
+    </section>
+
+</footer>
         <script src="js/plugins.js"></script>
     <script>
         $(window).on("load", function() {

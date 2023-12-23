@@ -901,7 +901,7 @@ background-color: #333 !important;
 
   .hero-image img {
     margin-top: -50px;
-    max-height: 30vh;
+    max-height: 25vh;
     margin-top: 20px; /* Add margin between text and image on smaller screens */
   }
   .hero-text h2 {
