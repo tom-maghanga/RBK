@@ -12,66 +12,154 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+    <script>
+      let isMenuActive = false; // Variable to track toggle state
+
+function toggleMenu() {
+const navMenu = document.querySelector('.nav-menu');
+
+// Toggle the active class
+navMenu.classList.toggle('active');
+
+// Update the toggle state
+isMenuActive = !isMenuActive;
+
+// Check if the menu is active and hide the toggle menu
+if (isMenuActive) {
+// const hamburgerMenu = document.querySelector('.hamburger-menu');
+// hamburgerMenu.style.display = 'none';
+const navMenu = document.querySelector('.nav-menu');
+navMenu.style.display = 'none';
+document.querySelector('.nav-menu-sm').style.display='none';
+} else {
+// const hamburgerMenu = document.querySelector('.hamburger-menu');
+// hamburgerMenu.style.display = 'flex';
+const navMenu = document.querySelector('.nav-menu');
+navMenu.style.display = 'flex';
+document.querySelector('.nav-menu-sm').style.display='block';
+}
+}
+
+    function openWhatsAppChat() {
+        // Get form data
+        var product = document.querySelector('select[name="shred-info"]').value;
+        var pieces = document.getElementById('lname').value;
+        var printType = document.getElementById('email').value; // Assuming 'email' is the correct ID for printType
+        var deliveryDate = document.getElementById('date').value;; // Replace with the correct ID for the deliveryDate input field and get its value
+
+        // Construct the WhatsApp message
+        var message = "Product: " + product + "\n"
+        + "Number of pieces: " + pieces + "\n"
+        + "Print Type: " + printType + "\n"
+        + "Delivery Date: " + deliveryDate;
+
+                                    
+        // Replace the phone number with the actual phone number you want to open the chat with
+        var phoneNumber = '+254729833007'; // Include the country code
+
+        // Open WhatsApp desktop app manually with the pre-filled message
+        window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message), '_blank');
+    }
+</script>
+
+<script src="main.js"></script>
 </head>
 <body>
-    <!-- TOP MENU -->
-    <section class="top-bar navbar-expand-lg shadow-sm-sm p-3 mb-5 bg-white rounded">
-        <div class="container text-center">
-          <!-- Phone SVG icon -->
-        <img src="/img/phone.svg" alt="Phone" class="custom-icon">
-        <span class="icon-text">+254 729 833 007 | +254 780 833 007</span>
-        <span class="separator">|</span>
+<!-- TOP MENU -->
+<section class="top-bar navbar-expand-lg shadow-sm-sm p-3 mb-5 bg-white rounded">
+    <div class="container text-center">
+      <!-- Phone SVG icon -->
+    <img src="/img/phone.svg" alt="Phone" class="custom-icon">
+    <span class="icon-text">+254 729 833 007 | +254 780 833 007</span>
+    <span class="separator">|</span>
 
-        <!-- WhatsApp SVG icon -->
-        <img src="/img/whatsapp.svg" alt="WhatsApp" class="custom-icon">
-        <span class="icon-text">WHATSAPP US</span>
-        <span class="separator">|</span>
+    <!-- WhatsApp SVG icon -->
+    <img src="/img/whatsapp.svg" alt="WhatsApp" class="custom-icon">
+    <span class="icon-text" >WHATSAPP US</span>
+    <span class="separator">|</span>
 
-        <!-- Email SVG icon -->
-        <img src="/img/email.svg" alt="Email" class="custom-icon">
-        <span class="icon-text">EMAIL US</span>
-        </div>
-    </section>
+    <!-- Email SVG icon -->
+    <img src="/img/email.svg" alt="Email" class="custom-icon">
+    <span class="icon-text">EMAIL US</span>
+    </div>
+</section>
 
-    <!-- TOP MENU -->
+<!-- TOP MENU -->
 
 
-    <!-- LOGO & SIGN IN -->
-   <section class="container logo-section ">
-  <div class="logo-container">
+<div class="hamburger-menu" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+ <section class="logo-wrapper">
+     <!-- LOGO & SIGN IN -->
+  <section class="container logo-section ">
+    <div class="logo-container">
     <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
 
     <div class="search">
-      <input type="text" name="" id="" placeholder="Search">
-      <img src="/img/search.png" alt="" class="search-icon">
+        <input type="text" id="searchInput" placeholder="Search">
+        <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
     </div>
 
     <div class="ml-auto">
-      <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
-      
+        <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+        
     </div>
     <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
-  </div>
+    </div>
 </section>
+
+ </section>
+<!-- LOGO & SIGN IN -->
+ <!-- NAV -->
+ <div class="top-bar top-bar-1 navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+         
+  <div class="  container nav-container text-center">
+      <a class="navbar-brand" href="../nav-pages/digital.html">Digital <br>Printing</a>
+      <a class="navbar-brand" href="../nav-pages/large.html">Large Format <br>Printing</a>
+      <a class="navbar-brand" href="../nav-pages/flatbed.html">UV Flatbed <br>Printing</a>
+      <a class="navbar-brand" href="../nav-pages/engrave.html">Engraving <br>Fiber/CO2</a>
+      <a class="navbar-brand" href="../nav-pages/embroidery.html">Embroidery <br>Services</a>
+      <a class="navbar-brand" href="../nav-pages/sublimation.html">Sublimation <br>& Doming</a>
+      <a class="navbar-brand" href="../nav-pages/catalogue.html">Catalogue</a>
+      <a class="navbar-brand" href="../nav-pages/gallery.html">Gallery</a>        
+  </div>
+</div>
+
+<div class="top-bar nav-menu-sm   navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+       <!-- LOGO & SIGN IN -->
+    <section class=" logo-section ">
+        <div class="logo-container">
+        <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
     
-    <!-- LOGO & SIGN IN -->
-
-
-     <!-- NAV -->
-     <section class="top-bar navbar navbar-expand-lg shadow-sm p-3 mb-5 ">
-        <div class="container nav-container text-center">
-            <a class="navbar-brand" href="digital.html">Digital <br>Printing</a>
-            <a class="navbar-brand" href="large.html">Large Format <br>Printing</a>
-            <a class="navbar-brand" href="flatbed.html">UV Flatbed <br>Printing</a>
-            <a class="navbar-brand" href="engrave.html">Engraving <br>Fiber/CO2</a>
-            <a class="navbar-brand" href="embroidery.html">Embroidery <br>Services</a>
-            <a class="navbar-brand" href="sublimation.html">Sublimation <br>& Doming</a>
-            <a class="navbar-brand" href="catalogue.html">Catalogue</a>
-            <a class="navbar-brand" href="gallery.html">Gallery</a>        
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search">
+            <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+        </div>
+    
+        <!-- <div class="ml-auto"> -->
+            <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+            <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
+            
+        <!-- </div> -->
         </div>
     </section>
+  
+  <!-- LOGO & SIGN IN -->
 
-    <!-- NAV -->
+  <div class=" nav-menu justify-content-start container nav-container text-center">
+      <a class="navbar-brand" href="../nav-pages/digital.html">Digital Printing</a>
+      <a class="navbar-brand" href="../nav-pages/large.html">Large Format Printing</a>
+      <a class="navbar-brand" href="../nav-pages/flatbed.html">UV Flatbed Printing</a>
+      <a class="navbar-brand" href="../nav-pages/engrave.html">Engraving Fiber/CO2</a>
+      <a class="navbar-brand" href="../nav-pages/embroidery.html">Embroidery Services</a>
+      <a class="navbar-brand" href="../nav-pages/sublimation.html">Sublimation & Doming</a>
+      <a class="navbar-brand" href="../nav-pages/catalogue.html">Catalogue</a>
+      <a class="navbar-brand" href="../nav-pages/gallery.html">Gallery</a>        
+  </div>
+</div>
 
 
 

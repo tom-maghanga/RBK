@@ -15,6 +15,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="/node_modules/standalone-whatsapp-widget/dist/js/standalone-whatsapp-widget.min.js"></script>
     <script>
+          let isMenuActive = false; // Variable to track toggle state
+
+function toggleMenu() {
+  const navMenu = document.querySelector('.nav-menu');
+  
+  // Toggle the active class
+  navMenu.classList.toggle('active');
+  
+  // Update the toggle state
+  isMenuActive = !isMenuActive;
+
+  // Check if the menu is active and hide the toggle menu
+  if (isMenuActive) {
+    // const hamburgerMenu = document.querySelector('.hamburger-menu');
+    // hamburgerMenu.style.display = 'none';
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.style.display = 'none';
+    document.querySelector('.nav-menu-sm').style.display='none';
+  } else {
+    // const hamburgerMenu = document.querySelector('.hamburger-menu');
+    // hamburgerMenu.style.display = 'flex';
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.style.display = 'flex';
+    document.querySelector('.nav-menu-sm').style.display='block';
+  }
+}
+
         function openWhatsAppChat() {
             // Get form data
             var product = document.querySelector('select[name="shred-info"]').value;
@@ -61,31 +88,37 @@
 
     <!-- TOP MENU -->
 
-
-    <!-- LOGO & SIGN IN -->
-   <section class="container logo-section ">
-  <div class="logo-container">
-    <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
-
-    <div class="search">
-        <input type="text" id="searchInput" placeholder="Search">
-        <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+ 
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
-
-    <div class="ml-auto">
-      <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
-      
-    </div>
-    <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
-  </div>
-</section>
+     <section class="logo-wrapper">
+         <!-- LOGO & SIGN IN -->
+      <section class="container logo-section ">
+        <div class="logo-container">
+        <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
     
-    <!-- LOGO & SIGN IN -->
-
-
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search">
+            <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+        </div>
+    
+        <div class="ml-auto">
+            <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+            
+        </div>
+        <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
+        </div>
+    </section>
+  
+     </section>
+  <!-- LOGO & SIGN IN -->
      <!-- NAV -->
-     <section class="top-bar navbar navbar-expand-lg shadow-sm p-3 mb-5 ">
-        <div class="container nav-container text-center">
+     <div class="top-bar top-bar-1 navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+           
+        <div class="  container nav-container text-center">
             <a class="navbar-brand" href="nav-pages/digital.html">Digital <br>Printing</a>
             <a class="navbar-brand" href="nav-pages/large.html">Large Format <br>Printing</a>
             <a class="navbar-brand" href="nav-pages/flatbed.html">UV Flatbed <br>Printing</a>
@@ -95,10 +128,45 @@
             <a class="navbar-brand" href="nav-pages/catalogue.html">Catalogue</a>
             <a class="navbar-brand" href="nav-pages/gallery.html">Gallery</a>        
         </div>
-    </section>
+    </div>
 
+    <div class="top-bar nav-menu-sm   navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+           <!-- LOGO & SIGN IN -->
+        <section class=" logo-section ">
+            <div class="logo-container">
+            <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
+        
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search">
+                <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+            </div>
+        
+            <!-- <div class="ml-auto"> -->
+                <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+                <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
+                
+            <!-- </div> -->
+            </div>
+        </section>
+      
+      <!-- LOGO & SIGN IN -->
+  
+        <div class=" nav-menu justify-content-start container nav-container text-center">
+            <a class="navbar-brand" href="nav-pages/digital.html">DigitalPrinting</a>
+            <a class="navbar-brand" href="nav-pages/large.html">Large Format Printing</a>
+            <a class="navbar-brand" href="nav-pages/flatbed.html">UV Flatbed Printing</a>
+            <a class="navbar-brand" href="nav-pages/engrave.html">Engraving Fiber/CO2</a>
+            <a class="navbar-brand" href="nav-pages/embroidery.html">Embroidery Services</a>
+            <a class="navbar-brand" href="nav-pages/sublimation.html">Sublimation & Doming</a>
+            <a class="navbar-brand" href="nav-pages/catalogue.html">Catalogue</a>
+            <a class="navbar-brand" href="nav-pages/gallery.html">Gallery</a>        
+        </div>
+    </div>
     <!-- NAV -->
-
+<br>
+<br>
+<br>
+<br>
 
         <!-- HERO SECTION -->
         <section class="container hero">
@@ -115,9 +183,9 @@
 
                 <!-- ALL PRODUCTS SECTION -->
                 <section class="container products ">
-                   <h1>BROWSE POPULAR CATEGORIES</h1>
+                   <h1 class="text-center ">BROWSE POPULAR CATEGORIES</h1>
 
-                   <div class="row">
+                   <div class="row ">
                         <div class="card  " >
                             <img class="card-img-top" src="/img/hoodie.png" alt="Card image cap">
                                 <div class="card-body">
