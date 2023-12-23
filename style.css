@@ -832,6 +832,14 @@ background-color: #333 !important;
   width: 35%;
 }
 
+.email{
+  display: none;
+}
+
+.separator{
+  display: none;
+}
+
 .logo{
   width: 5rem;
 
