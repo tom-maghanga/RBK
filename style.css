@@ -944,6 +944,12 @@ background-color: #333 !important;
     margin-right: 10px;
     margin-bottom: 0;
   }
+  .description {
+    width: 100%;
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 10px;
+  }
 
   .enquiry-bottom{
 
