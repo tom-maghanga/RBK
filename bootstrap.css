@@ -12077,7 +12077,7 @@ textarea.form-control-lg {
 .connect {
     flex: 1;
     max-width: 100%;
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin: 10px; /* Adjust the margin as needed */
 }
 
 /* Additional styling for individual elements if necessary */
