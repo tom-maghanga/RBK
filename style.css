@@ -222,7 +222,7 @@ html, body{
     margin: 0 auto; /* Center the container */
   }
   .hamburger-menu {
-    margin-top: -45px;
+    margin-top: -30px;
     display: flex;
     align-items: center;
     justify-content: center;
