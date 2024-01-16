@@ -221,6 +221,7 @@ html, body{
     margin: 0 auto; /* Center the container */
   }
   .hamburger-menu {
+    margin-top: -20px;
     display: flex;
   }
 
