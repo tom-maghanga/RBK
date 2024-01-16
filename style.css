@@ -976,7 +976,7 @@ background-color: #333 !important;
     width: fit-content;
   }
 
-  .footer-row {
+  .footer-row > .container {
     display: flex;
     flex-wrap: wrap;
 }
