@@ -991,6 +991,7 @@ background-color: #333 !important;
     flex: 1;
     max-width: 100%;
     margin: 10px; /* Adjust the margin as needed */
+    margin-top: -10px;
 }
 
 /* Additional styling for individual elements if necessary */
