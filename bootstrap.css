@@ -12064,7 +12064,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 
-  
   .footer-row.container {
     display: flex;
     flex-wrap: wrap;
@@ -12076,14 +12075,14 @@ textarea.form-control-lg {
 
 .location,
 .connect {
-    flex: 1;
+    /* flex: 1; */
     max-width: 100%;
-    margin: 0px; /* Adjust the margin as needed */
+    margin-top: 10px; /* Adjust the margin as needed */
 }
 
 /* Additional styling for individual elements if necessary */
 .footer-logo {
-    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    max-width: 75%; /* Make sure the image doesn't exceed its container */
 }
 
 .footer-line {
@@ -12093,6 +12092,7 @@ textarea.form-control-lg {
 .info-text {
     color: #007BFF; /* Change to your desired link color */
 }
+
 
 }
 
