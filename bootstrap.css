@@ -12065,10 +12065,11 @@ textarea.form-control-lg {
   }
 
   
-  .footer-row > .container {
+  .footer-row.container {
     display: flex;
     flex-wrap: wrap;
 }
+
 .footer-row {
     justify-content: space-between;
 }
