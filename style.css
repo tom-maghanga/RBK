@@ -989,7 +989,7 @@ background-color: #333 !important;
 .connect {
     flex: 1;
     max-width: 100%;
-    margin: -10px; /* Adjust the margin as needed */
+    margin: 0px; /* Adjust the margin as needed */
 }
 
 /* Additional styling for individual elements if necessary */
