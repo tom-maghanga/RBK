@@ -1175,3 +1175,39 @@ background-color: #333 !important;
 }
 
 }
+
+
+
+/*connect buttons*/
+.social-icons {
+  display: flex;
+  
+}
+
+.info-link {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto; /* Set height to make the box square */
+  text-decoration: none;
+  color: #333; /* Default color */
+  font-size: 16px; /* Choose your desired font size */
+  margin: 0.5rem; /* Equal margin on both sides */
+  padding: 5px;
+  border: 1px solid #333; /* Border color */
+  border-radius: 10%; /* Make the border round */
+  transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+.info-link:hover {
+  color: yellow; /* Color on hover */
+}
+
+.social-icons:hover {
+  color: yellow; /* Color on hover */
+}
+
+.info-link i {
+  margin-right: 0;
+}
+
