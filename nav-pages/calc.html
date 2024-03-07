@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBK</title>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
+
+    <script>
+        function openWhatsAppForOrder() {
+            try {
+                // Get product details
+                var productName = document.querySelector('.product-header').innerText;
+    
+                // Get selected options
+                var selectedPaperType = document.getElementById('paper-type').value;
+                var selectedPrintingOption = document.getElementById('printing-option').value;
+    
+                // Get number of pieces
+                var numberOfPieces = document.getElementById('num-pieces').value;
+    
+                // Calculate the price based on selected options and number of pieces
+                var pricePerUnit = calculatePrice(selectedPaperType, selectedPrintingOption);
+                var totalPrice = pricePerUnit * numberOfPieces;
+    
+                // Construct the WhatsApp message
+                var message = "Order Details:\n" +
+                    "Product: " + productName + "\n" +
+                    "Paper Type: " + selectedPaperType + "\n" +
+                    "Printing Option: " + selectedPrintingOption + "\n" +
+                    "Number of Pieces: " + numberOfPieces + "\n" +
+                    "Total Price: Kes " + totalPrice.toFixed(2);
+    
+                // Replace the phone number with the actual phone number you want to open the chat with
+                var phoneNumber = '+254729833007'; // Include the country code
+    
+                // Open WhatsApp chat in a new tab
+                window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message), '_blank');
+            } catch (error) {
+                console.error('Error in openWhatsAppForOrder:', error);
+            }
+        }
+    
+        function updatePrice() {
+            // Get selected options
+            var selectedPaperType = document.getElementById('paper-type').value;
+            var selectedPrintingOption = document.getElementById('printing-option').value;
+    
+            // Get number of pieces
+            var numberOfPieces = document.getElementById('num-pieces').value;
+    
+            // Calculate the price based on selected options and number of pieces
+            var pricePerUnit = calculatePrice(selectedPaperType, selectedPrintingOption);
+            var totalPrice = pricePerUnit * numberOfPieces;
+    
+            // Update the displayed estimated price
+            document.getElementById('estimated-price').innerText = totalPrice.toFixed(2) + ' KSh';
+        }
+    
+        function calculatePrice(paperType, printingOption) {
+            // Add logic to calculate the price based on the selected paper type and printing option
+            // Use the provided prices or adjust as needed
+            var prices = {
+                'art-paper-115': { 'single-sided': 22.5, 'double-sided': 36.5 },
+                'art-paper-130': { 'single-sided': 23, 'double-sided': 36 },
+                'art-paper-150': { 'single-sided': 24, 'double-sided': 38 },
+                'art-paper-170': { 'single-sided': 26.5, 'double-sided': 42 },
+                'art-card-250': { 'single-sided': 29, 'double-sided': 43 },
+                'art-card-300': { 'single-sided': 33, 'double-sided': 47 },
+                'matt-paper-350': { 'single-sided': 46, 'double-sided': 62 },
+                'ivory-paper-300': { 'single-sided': 54, 'double-sided': 67 },
+                'cover-board-250': { 'single-sided': 30, 'double-sided': 68 },
+                'tic-tac': { 'single-sided': 35.5, 'double-sided': 0 },
+                'bong-paper': { 'single-sided': 21, 'double-sided': 35 },
+                'paper-provided': { 'single-sided': 21, 'double-sided': 30.5 },
+            };
+    
+            return prices[paperType][printingOption];
+        }
+    </script>
+    
+    
+    
+
+  <script src="main.js"></script>
+</head>
+<body>
+    <!-- TOP MENU -->
+    <section class="top-bar navbar-expand-lg shadow-sm-sm p-3 mb-5 bg-white rounded">
+        <div class="container text-center">
+          <!-- Phone SVG icon -->
+        <img src="/img/phone.svg" alt="Phone" class="custom-icon">
+        <span class="icon-text">+254 729 833 007 | +254 780 833 007</span>
+        <span class="separator">|</span>
+  
+        <!-- WhatsApp SVG icon -->
+        <span>
+          <img src="/img/whatsapp.svg" alt="WhatsApp" class="custom-icon">
+        <span class="icon-text" >WHATSAPP US</span>
+        <span class="separator">|</span>
+        </span>
+  
+        <!-- Email SVG icon -->
+        <img src="/img/email.svg" alt="Email"  class="email custom-icon">
+         <span  id="email" class="icon-text">EMAIL US</span>
+        </div>
+    </section>
+  
+    <!-- TOP MENU -->
+  
+  
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+     <section class="logo-wrapper">
+         <!-- LOGO & SIGN IN -->
+      <section class="container logo-section ">
+        <div class="logo-container">
+        <a href="/"> <img src="/img/logo.png" alt="" class="logo"></a>
+    
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search">
+            <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+        </div>
+    
+        <div class="ml-auto">
+            <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+            
+        </div>
+        <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
+        </div>
+    </section>
+  
+     </section>
+  <!-- LOGO & SIGN IN -->
+     <!-- NAV -->
+     <div class="top-bar top-bar-1 navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+           
+      <div class="  container nav-container text-center">
+          <a class="navbar-brand" href="../nav-pages/digital.html">Digital <br>Printing</a>
+          <a class="navbar-brand" href="../nav-pages/large.html">Large Format <br>Printing</a>
+          <a class="navbar-brand" href="../nav-pages/flatbed.html">UV Flatbed <br>Printing</a>
+          <a class="navbar-brand" href="../nav-pages/engrave.html">Engraving <br>Fiber/CO2</a>
+          <a class="navbar-brand" href="../nav-pages/embroidery.html">Embroidery <br>Services</a>
+          <a class="navbar-brand" href="../nav-pages/sublimation.html">Sublimation <br>& Doming</a>
+          <a class="navbar-brand" href="../nav-pages/catalogue.html">Catalogue</a>
+          <a class="navbar-brand" href="../nav-pages/gallery.html">Gallery</a>        
+      </div>
+  </div>
+  
+    <div class="top-bar nav-menu-sm   navbar  navbar-collapse navbar-expand-lg shadow-sm p-3 mb-5 " id="navbarNav">
+           <!-- LOGO & SIGN IN -->
+        <section class=" logo-section justify-content-center ">
+            <div class="logo-container">
+            <a href="/"> <img src="/img/logo_mob.png" alt="" class="logo"></a>
+        
+            <!-- <div class="search">
+                <input type="text" id="searchInput" placeholder="Search">
+                <img src="/img/search.png" alt="" class="search-icon" id="searchIcon">
+            </div> -->
+        
+            <!-- <div class="ml-auto"> -->
+                <a href="/nav-pages/quote.html" class="enquiry btn"><span class="quick">REQUEST A QUOTE</span></a>
+                <a href="/nav-pages/sign-in.html" class="portfolio btn " ><span class="port">Sign In</span></a>
+                
+            <!-- </div> -->
+            </div>
+        </section>
+      
+      <!-- LOGO & SIGN IN -->
+  
+      <div class=" nav-menu justify-content-start container nav-container text-center">
+          <a class="navbar-brand" href="../nav-pages/digital.html">Digital Printing</a>
+          <a class="navbar-brand" href="../nav-pages/large.html">Large Format Printing</a>
+          <a class="navbar-brand" href="../nav-pages/flatbed.html">UV Flatbed Printing</a>
+          <a class="navbar-brand" href="../nav-pages/engrave.html">Engraving Fiber/CO2</a>
+          <a class="navbar-brand" href="../nav-pages/embroidery.html">Embroidery Services</a>
+          <a class="navbar-brand" href="../nav-pages/sublimation.html">Sublimation & Doming</a>
+          <a class="navbar-brand" href="../nav-pages/catalogue.html">Catalogue</a>
+          <a class="navbar-brand" href="../nav-pages/gallery.html">Gallery</a>        
+      </div>
+  </div>
+
+  <div class="product container">
+    <div class="image">
+    <h3 class="product-header">A3 Digital Print Calculator</h3>
+        <img src="../img/a3_paper.png" alt="A3 Paper Size" class="img-fluid rounded">
+    </div>
+    <div class="details mt-3">
+        <label for="paper-type" class="form-label">Select Paper Type:</label>
+        <select id="paper-type" class="form-select" onchange="updatePrice()">
+            <option value="art-paper-115">ART PAPER 115 GSM</option>
+            <option value="art-paper-130">ART PAPER 130 GSM</option>
+            <option value="art-paper-150">ART PAPER 150 GSM</option>
+            <option value="art-paper-170">ART PAPER 170 GSM</option>
+            <option value="art-card-250">ART CARD 250 GSM</option>
+            <option value="art-card-300">ART CARD 300 GSM</option>
+            <option value="matt-paper-350">MATT PAPER 350 GSM</option>
+            <option value="ivory-paper-300">IVORY PAPER 300GSM</option>
+            <option value="cover-board-250">COVER BOARD 250 GSM</option>
+            <option value="tic-tac">TIC TAC</option>
+            <option value="bong-paper">BOND PAPER</option>
+            <option value="paper-provided">PAPER PROVIDED</option>
+        </select>
+
+        <label for="printing-option" class="form-label mt-3">Select Printing Option:</label>
+        <select id="printing-option" class="form-select" onchange="updatePrice()">
+            <option value="single-sided">Single Sided</option>
+            <option value="double-sided">Double Sided</option>
+        </select>
+
+        <!-- Number of pieces -->
+        <label for="num-pieces" class="form-label mt-3">Number of Pieces:</label>
+        <input type="number" id="num-pieces" class="form-control" min="1" value="1" onchange="updatePrice()">
+
+        <!-- Estimated Price -->
+        <div class="price-section mt-3">
+            <label for="estimated-price" class="form-label">Estimated Price:</label>
+            <span id="estimated-price" class="badge bg-primary">0.0 KSh</span>
+        </div>
+
+        <div class="order-options mt-3">
+            <button class="btn btn-warning" type="submit" onclick="openWhatsAppForOrder()">
+                <img src="/whatsapp.svg" class="custom-order-icon" alt="WhatsApp Icon"> <span style="color: white;">Order via Whatsapp</span>
+            </button>
+            
+        </div>
+
+        <!-- Solid Prints section -->
+        <div class="solid-prints-section mt-3">
+            <p>All Solid Prints at an additional cost of 5/=</p>
+            <p>Minimum charges - KSh 100/=</p>
+        </div>
+    </div>
+</div>
+
+    
+
+    <footer class=" footer" style=" ">
+        <section class=" container footer-row row">
+            <div class="location">
+                <img src="../img/logo.png" class="footer-logo" alt="" srcset="">
+
+               
+                <hr class="footer-line">
+                <p>
+                info@redberylkenya.com <br>
+                redberylkenya@gmail.com <br>
+                +254 729 833 007 <br>
+                </p>
+    
+            </div>
+             <div class="connect">
+                <h4>OFFICES</h4>
+                <br>
+                MITIHANI HSE 1ST FLOOR,<br>
+                MFANGANO STREET, NRB
+            </div>
+    
+            <div class="connect">
+                <h4>INFORMATION</h4>
+                <br>
+                
+         <a href="/nav-pages/about.html" class="info-text">ABOUT US</a> <br>
+            <a href="/nav-pages/gallery.html" class="info-text">OUR WORK</a> <br>
+                <a href="" class="info-text">NEWSLETTER</a>
+            </div>  
+            
+              <div class="connect">
+               <h4>CONNECT</h4>
+               <br>
+               <div class="social-icons">
+                <a href="https://www.facebook.com/RedberylKenya" class="info-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/redberyl_kenya/" class="info-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/RedberylKenya" class="info-link" target="_blank"><i class="fab fa-twitter"></i></a>
+              </div>
+              
+              
+            </div>
+    
+           
+           
+            
+        </section>
+    
+    </footer>
+
+</body>
+</html>
