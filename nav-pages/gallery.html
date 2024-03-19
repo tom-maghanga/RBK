@@ -7,11 +7,14 @@
       <link rel="stylesheet" href="../bootstrap.css">
       <link rel="stylesheet" href="../style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >
-      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <script src="main.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+      
+
       <script>
+        
+      
          let isMenuActive = false; // Variable to track toggle state
          
          function toggleMenu() {
@@ -59,7 +62,10 @@
            // Open WhatsApp desktop app manually with the pre-filled message
            window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message), '_blank');
          }
+  
+      
       </script>
+      
       <script src="main.js"></script>
    </head>
    <body>
@@ -144,137 +150,182 @@
             <a class="navbar-brand" href="../nav-pages/gallery.html">Gallery</a>        
          </div>
       </div>
+
       <div class="container">
          <!-- Gallery -->
          <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-               <img
-                  src="../gallery/polo.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-               <img
-                  src="../gallery/back.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
-               <img
-                  src="../gallery/mzima.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-               <img
-                  src="../gallery/cocacola.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="col-lg-3 ">
                <img
                   src="../gallery/mass.jpeg"
                   class="w-100 shadow-1-strong rounded mb-4"
                   />
-               <img
-                  src="../gallery/deloitte.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
             </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
-               <img
-                  src="../gallery/im.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-               <img
-                  src="../gallery/imbank.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
-               <img
-                  src="../gallery/mutual-old.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-               <img
-                  src="../gallery/mutual.jpeg"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  />
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="col-lg-3 ">
                <img
                   src="../gallery/oriental.jpeg"
                   class="w-100 shadow-1-strong rounded mb-4"
                   />
+            </div>
+            <div class="col-lg-3 ">
                <img
                   src="../gallery/rerec.jpeg"
                   class="w-100 shadow-1-strong rounded mb-4"
                   />
             </div>
+            <div class="col-lg-3 ">
+               <img
+                  src="../gallery/rerec.jpeg"
+                  class="w-100 shadow-1-strong rounded mb-4"
+                  />
+            </div>
+            <div class="col-lg-3 ">
+               <img
+                  src="../gallery/im.jpeg"
+                  class="w-100 shadow-1-strong rounded mb-4"
+                  />
+            </div>
+            <div class="col-lg-3 ">
+               <img
+                  src="../gallery/mutual-old.jpeg"
+                  class="w-100 shadow-1-strong rounded mb-4"
+                  />
+            </div>
+            <div class="col-lg-3 ">
+               <img
+                  src="../gallery/mzima.jpeg"
+                  class="w-100 shadow-1-strong rounded mb-4"
+                  />
+            </div>
+            <div class="col-lg-3 ">
+               <img
+                  src="../gallery/delloitte.jpeg"
+                  class="w-100 shadow-1-strong rounded mb-4"
+                  />
+            </div>
          </div>
+      </div>
+      <div class="demo">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                     <div id="testimonial-slider" class="owl-carousel">
+                         <div class="testimonial">
+                             <div class="testimonial-content">
+                                 <div class="testimonial-icon">
+                                     <i class="fa fa-quote-left"></i>
+                                 </div>
+                                 <p class="description">
+                                    Consistently exceeding expectations - the Redberyl team has been an invaluable asset for over 7 years across multiple projects. 
+                                    Their dedication and creativity continue to help propel our success. Truly appreciated!
+                                 </p>
+                             </div>
+                             <h3 class="title">Joy Nyang'or</h3>
+                             <!-- <span class="post">Web Developer</span> -->
+                         </div>
+      
+                         <div class="testimonial">
+                             <div class="testimonial-content">
+                                 <div class="testimonial-icon">
+                                     <i class="fa fa-quote-left"></i>
+                                 </div>
+                                 <p class="description">
+                                    The team is professional, attentive to details and always goes above and beyond to meet the clients needs. I highly recommend.
+                                 </p>
+                             </div>
+                             <h3 class="title">Stacy Aluoch</h3>
+                             <span class="post"></span>
+                         </div>
+      
+                         <div class="testimonial">
+                             <div class="testimonial-content">
+                                 <div class="testimonial-icon">
+                                     <i class="fa fa-quote-left"></i>
+                                 </div>
+                                 <p class="description">
+                                    Been using there services for over 5 years now and I am satisfied with the quality of work and delivery time. I would highly recommend.
+                                 </p>
+                             </div>
+                             <h3 class="title">Pamela Ambutu</h3>
+                             <span class="post"></span>
+                         </div>
+                         <div class="testimonial">
+                           <div class="testimonial-content">
+                               <div class="testimonial-icon">
+                                   <i class="fa fa-quote-left"></i>
+                               </div>
+                               <p class="description">
+                                 The best printing company I've ever worked with. They deliver quality and on time. Easy to work with. Definitely would recommend.
+                               </p>
+                           </div>
+                           <h3 class="title">Whitney Azande</h3>
+                           <span class="post"></span>
+                       </div>
+                       <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-icon">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p class="description">
+                              Redberyl Kenya are passionate about what they do! Their creativity and attention to detail is simply amazing and they will deliver! And on time! As for burning the midnight oil and deadlines...well, look no further!
+                            </p>
+                        </div>
+                        <h3 class="title">Nicole Githiri</h3>
+                        <span class="post"></span>
+                    </div>
+                    <div class="testimonial">
+                     <div class="testimonial-content">
+                         <div class="testimonial-icon">
+                             <i class="fa fa-quote-left"></i>
+                         </div>
+                         <p class="description">
+                           I've worked with them and I can definitely recommend to anyone for branding! Their services are beyond expectations.
+                         </p>
+                     </div>
+                     <h3 class="title">Keziah Ambajo</h3>
+                     <span class="post"></span>
+                 </div>
 
-         <!-- add more here -->
-         <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-             <img
-                src=""
-                class="w-100 shadow-1-strong rounded mb-4"
-                />
-          </div>
-       </div>
-      </div>
-      <!-- Gallery -->
-      </div>
+                 <div class="testimonial">
+                     <div class="testimonial-content">
+                         <div class="testimonial-icon">
+                             <i class="fa fa-quote-left"></i>
+                         </div>
+                         <p class="description">
+                           They have great customer experience and deliver what they advertise.
+This I definitely would recommend.
+                         </p>
+                     </div>
+                     <h3 class="title">Felix Odonde</h3>
+                     <span class="post"></span>
+                 </div>
+                 <div class="testimonial">
+                   <div class="testimonial-content">
+                       <div class="testimonial-icon">
+                           <i class="fa fa-quote-left"></i>
+                       </div>
+                       <p class="description">
+                        A great company to work with that delivers high quality products and also deliver on time.
+                       </p>
+                   </div>
+                   <h3 class="title">Cecilia Kimani</h3>
+                   <span class="post"></span>
+               </div>
+               <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="testimonial-icon">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="description">
+                     One of the best printing and branding services provider. Would definitely recommend.                    </p>
+                </div>
+                <h3 class="title">Collins Kimokoti</h3>
+                <span class="post"></span>
+            </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
       <footer class=" footer" style=" ">
          <section class=" container footer-row row">
             <div class="location">
@@ -315,4 +366,24 @@
          </section>
       </footer>
    </body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   <script>
+       $(document).ready(function(){
+          
+         $("#testimonial-slider").owlCarousel({
+        items: 3,
+        itemsDesktop: [1000, 3],
+        itemsDesktopSmall: [980, 2],
+        itemsTablet: [768, 2],
+        itemsMobile: [650, 1],
+        pagination: true,
+        navigation: false,
+        slideSpeed: 1000,
+        autoplay: true, // Enable auto-scrolling
+        autoplayTimeout: 5000, // Time between each auto-scroll in milliseconds (adjust as needed)
+        autoplayHoverPause: true // Pause auto-scrolling when mouse hovers over the carousel
+    });
+       });
+   </script>
 </html>
