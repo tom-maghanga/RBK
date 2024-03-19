@@ -1269,6 +1269,35 @@ background-color: #333 !important;
   letter-spacing: 1px;
   margin: 0 0 5px 0;
 }
+
+.testimonial-content {
+  border: 2px solid black; 
+  padding: 15px; 
+  border-radius: 10px; 
+}
+
+
+#testimonial-slider .title {
+  text-align: center; 
+  margin-top: 20px; 
+}
+#testimonial-slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  width: 100%; /* Adjust as needed */
+  height: 200px; /* Set the height of each testimonial box */
+  border: 1px solid #ccc; /* Border styling */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-content {
+  flex-grow: 1; /* Take remaining vertical space */
+}
 .testimonial .post{
   display: block;
   font-size: 14px;
