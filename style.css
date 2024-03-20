@@ -1315,3 +1315,26 @@ background-color: #333 !important;
 .owl-theme .owl-controls.clickable .owl-page:hover span{
   background: #ff4242;
 }
+
+.owl-nav {
+  margin-top: 20px;
+}
+
+.owl-prev,
+.owl-next {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+
+.arrow-nav {
+  font-size: 36px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+  color: #ffc107;
+}
