@@ -25,8 +25,8 @@ app.post('/send-email', upload.single('fileInput'), (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail', // e.g., Gmail, Yahoo, etc.
         auth: {
-            user: 'thomasmaghanga003@gmail.com',
-            pass: 'gwqu crpt cpbd dhwi'
+            user: 'redberylkenya@gmail.com',
+            pass: 'flfl wpsp uhyp vlxv'
         }
     });
 
