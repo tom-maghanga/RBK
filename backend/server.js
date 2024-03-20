@@ -22,10 +22,6 @@ app.post('/send-email', upload.single('fileInput'), (req, res) => {
     const file = req.file;
 
     // Create transporter object using SMTP transport
-    if (!file) {
-        return res.status(400).send('No file uploaded');
-    }
-
     const transporter = nodemailer.createTransport({
         service: 'gmail', // e.g., Gmail, Yahoo, etc.
         auth: {
@@ -34,19 +30,21 @@ app.post('/send-email', upload.single('fileInput'), (req, res) => {
         }
     });
 
-    // Email message with file attachment
+    // Email message
     const mailOptions = {
         from: email,
-        to: 'thomasmaghanga003@gmail.com',
+        to: 'info@redberylkenya.com',
         subject: 'New Quote Request',
-        text: `Name: ${name}\nEmail: ${email}\nPhone Number: ${number}\nMessage: ${message}`,
-        attachments: [
-            {
-                filename: file.originalname,
-                path: file.path
-            }
-        ]
+        text: `Name: ${name}\nEmail: ${email}\nPhone Number: ${number}\nMessage: ${message}`
     };
+
+    // If file is uploaded, add it as an attachment
+    if (file) {
+        mailOptions.attachments = [{
+            filename: file.originalname,
+            path: file.path
+        }];
+    }
 
     // Send email
     transporter.sendMail(mailOptions, (error, info) => {
