@@ -324,6 +324,7 @@ html, body{
     display: flex;
     justify-content: flex-start;
     width: 110%;
+    height: auto;
   }
 
     /* end of hero section */
