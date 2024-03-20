@@ -298,12 +298,15 @@ html, body{
     width: 1000px;
     margin-top: -145px;
     background-color: #ce1b22;
-    height: 250px;
+    height: 320px;
   }
   .hero-text{
+    padding: -10px;
     flex: 1;
     color: #f8f8f8;
     text-align: center;
+    margin-left: 20px;
+    margin-right: -50px;
   }
 
   .hero-text h2{
@@ -316,10 +319,11 @@ html, body{
   }
 
   .hero-image img{
+    padding: 120px;
     flex: 1;
     display: flex;
-    justify-content: flex-end;
-    max-width: 100%;
+    justify-content: flex-start;
+    width: 110%;
   }
 
     /* end of hero section */
