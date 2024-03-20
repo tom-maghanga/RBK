@@ -311,6 +311,10 @@ html, body{
     font-weight: bold;
   }
 
+  .hero-text h4{
+    margin-top: -20px;
+  }
+
   .hero-image img{
     flex: 1;
     display: flex;
