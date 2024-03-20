@@ -560,7 +560,7 @@ footer-row {
 }
 
 .connect h4 {
-  margin-bottom: 10px; /* Remove default margin-bottom for h4 elements */
+ 
 }
 
 .connect br {
@@ -587,9 +587,9 @@ footer-row {
   margin-top: 40px; /* Adjusted margin-top to bring them closer to the top */
 }
 .information h4{
-  margin-top: 20px;
+
   font-size: 1.2rem;
-  margin-bottom: 10px;
+
 }
 .connect h4{
   margin-top: 50px;
@@ -604,7 +604,7 @@ footer-row {
   color: #fff;
   text-decoration: none;
   display: block;
-  margin-bottom: 5px;
+
 }
 
 /* Add hover styles if needed */
