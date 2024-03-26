@@ -334,8 +334,10 @@ html, body{
 }
 
 .c-2-text{
-  width: 15rem;
+  width: 18rem;
 }
+
+
 
 .c-3-text::after{
   color: #ccc;
