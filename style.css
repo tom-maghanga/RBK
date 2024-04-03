@@ -209,7 +209,7 @@ html, body{
 
 .bar {
   width: 30px;
-  height: 3px;
+  height: 2px;
   background-color: #c10c10;
   margin: 6px 0;
   border-radius: 2px;
@@ -227,11 +227,11 @@ html, body{
   .hamburger-menu {
     margin-top: -30px;
     display: flex;
+    width: 60px;
     align-items: center;
-    justify-content: center;
     margin-left: 10px;
     border: 1px solid #ccc; /* Border color */
-    border-radius: 4px; /* Round the corners */
+    border-radius: 0px; /* Round the corners */
   }
 
   .top-bar-1{
