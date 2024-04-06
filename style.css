@@ -1463,6 +1463,9 @@ background-color: #333 !important;
     object-fit: contain;
   }
 
+  .carousel_2{
+    margin-top: -8px;
+  }
 
 
   .c-2-text{
