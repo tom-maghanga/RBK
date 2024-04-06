@@ -931,45 +931,51 @@ background-color: #333 !important;
 
 /* Your existing styles */
 /* Tablet Media Query */
-/* Media query for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
-
+  
   /* Hide elements on smaller screens */
   .logo-wrapper,
   .top-text-sm,
   .top-bar-1,
   #email,
   .separator,
-  .container h1,
-  .footer-row.container,
-  .location,
-  .connect {
+  .container h1  {
     display: none;
   }
 
-/* Style the logo section on mobile screens */
-.logo-section {
-  display: flex; /* Use flexbox for layout and spacing */
-  justify-content: space-between; /* Evenly space items horizontally */
-  align-items: center; /* Vertically center items if needed */
+/* Style the hamburger menu container */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  
+  /* Background for a standout effect */
+  background-color: #f0f0f0; /* Adjust color as needed */
+  border-radius: 5px; /* Add rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  position: relative; /* Required for pseudo-element positioning */
 }
 
-  /* Hamburger menu icon styles (if needed) */
-  .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    /* ... your additional hamburger menu styles ... */
-  }
+/* Style the individual hamburger menu bars */
+.bar {
+  width: 30px; /* Adjust width as needed */
+  height: 3px; /* Adjust height as needed */
+  background-color: #c10c10; /* Adjust color for clear visibility */
+  margin-bottom: 5px; /* Adjust spacing between bars */
+  transition: transform 0.3s ease-in-out;
+  
+  /* Emphasize borders */
+  border-radius: 10px; /* Rounded corners also enhance borders */
+}
 
   /* Mobile menu styles */
   .nav-menu {
     display: none;
     flex-direction: column;
-    background-color: #c10c10; /* Adjust for desired background */
+    background-color: #f5f5f5; /* Adjust for desired background */
     padding: 15px; /* Adjust padding as needed */
     border: 1px solid #ddd; /* Optional subtle border */
     border-radius: 5px; /* Add rounded corners for a softer look */
@@ -1000,7 +1006,7 @@ background-color: #333 !important;
 
   /* Logo within hamburger menu (if applicable) */
   .hamburger-menu .mob-logo {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1019,15 +1025,148 @@ background-color: #333 !important;
     /* Add a subtle background color or text shadow here for active state */
   }
 
-  /* Hero section styles for smaller screens */
+
+  .top-text-sm {
+    display: block;
+  }
+.top-bar.nav-menu-sm {
+  text-align: left; /* Align elements to the left */
+}
+
+/* Add a line between the elements */
+.nav-menu {
+  border-top: 1px solid #ddd; /* Change the color as needed */
+  padding-top: 10px; /* Adjust the top padding for spacing */
+}
+
+.navbar-brand {
+  display: inline-block; /* Prevent the line from spanning the entire width */
+  padding: 0 10px; /* Add padding for spacing between elements */
+}
+
+/* Optional: Style for active state */
+.navbar-brand:hover {
+  background-color: #333; /* Change the background color on hover */
+}
+
+.logo-section {
+  display: flex; /* Use flexbox for layout and spacing */
+  justify-content: space-between; /* Evenly space items horizontally */
+  align-items: center; /* Vertically center items if needed */
+}
+
+
+
+/* Styles for the logo container and search section */
+.logo-container,
+.search {
+  flex: 1; /* Give equal flex space to logo and search */
+}
+
+  .products{
+
+    margin-top: 45px;
+    text-align: center;
+    width: auto;
+    background: linear-gradient(to bottom, #ffffff, #f8f4f4);
+    
+}
+
+  .logo-wrapper{
+    display: none;
+  }
+  .logo-section{
+    width: 100%;
+    background-color: #c10c10;
+  }
+.quick, .port{
+  font-size: 0.8rem;
+}
+.search{
+  width: 35%;
+}
+
+#email{
+  display: none;
+}
+
+.separator{
+  display: none;
+}
+
+.logo{
+  width: 5rem;
+
+}
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .mob-logo{
+    display: flex;
+    max-width: 70px; /* Make sure the logo doesn't exceed its container */
+    height: auto; /
+  }
+
+  .logo-section .logo-container {
+    display: flex; /* Enable flexbox for layout */
+    justify-content: space-between; /* Evenly space items horizontally */
+    align-items: center; /* Vertically center items if needed */
+  }
+
+  
+  .top-bar-1{
+    display: none;
+  }
+  .nav-menu {
+    border-top: 1px solid #333;
+    display: none;
+    flex-direction: column; /* Updated to display items in a column */
+    align-items: flex-start;
+    background-color: #c10c10;
+    padding: 10px;
+    position: absolute;
+    top: 60px; /* Adjust the top position as needed */
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    /* No need for additional styles as it inherits flex-direction: column from .nav-menu */
+  }
+
+  .container h1{
+    text-align: left;
+  }
+  
+  .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .top-bar .container {
+    flex-wrap: wrap;
+  }
+
+
+
+
+
+
+
   .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: -50px;
-    background-color: #c10c10; /* Adjust if needed */
-    height: 325px; /* Adjust if needed */
+    background-color: #c10c10;
+    height: 250px;
   }
 
   .hero-text {
@@ -1039,7 +1178,6 @@ background-color: #333 !important;
     max-height: 25vh;
     margin-top: 20px; /* Add margin between text and image on smaller screens */
   }
-
   .hero-text h2 {
     margin-bottom: -20px;
     margin-top: -20px;
@@ -1048,43 +1186,19 @@ background-color: #333 !important;
 
   .hero-text h4 {
     margin-bottom: -20px;
+
     font-size: 1em; /* Adjust font size for smaller screens */
   }
 
-  .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    /* Background for a standout effect */
-    background-color: #f0f0f0; /* Adjust color as needed */
-    border-radius: 5px; /* Add rounded corners for a softer look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
-    margin-top: -50px;
-    margin-bottom: -10px;
-  }
-  
-  .bar {
-    width: 30px; /* Adjust width as needed */
-    height: 3px; /* Adjust height as needed */
-    background-color: #c10c10; /* Adjust color for clear visibility */
-    margin-bottom: 5px; /* Adjust spacing between bars */
-    transition: transform 0.3s ease-in-out;
+.top-text{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    /* Emphasize borders */
-    border-radius:  2px ; /* Rounded corners also enhance borders */
-    
-  }
-
-  
-  
-  @keyframes stripes {
-    from { background-position: 0 0; }
-    to { background-position: 100% 0; }
-  }
-  
+.top-text{
+  display: none;
+}
   /*PRODUCT CSS */
   .product{
     align-items: center;
@@ -1167,46 +1281,7 @@ background-color: #333 !important;
     color: #007BFF; /* Change to your desired link color */
 }
 
-
-/* Add a line between the elements */
-.nav-menu {
-  border-top: 1px solid #ddd; /* Change the color as needed */
-  padding-top: 10px; /* Adjust the top padding for spacing */
-  }
-  
-  .navbar-brand {
-  display: inline-block; /* Prevent the line from spanning the entire width */
-  padding: 0 10px; /* Add padding for spacing between elements */
-  }
-  
-  /* Optional: Style for active state */
-  .navbar-brand:hover {
-  background-color: #333; /* Change the background color on hover */
-  }
-  
-  .products{
-  
-    margin-top: 45px;
-    text-align: center;
-    width: auto;
-    background: linear-gradient(to bottom, #ffffff, #f8f4f4);
-    
-  }
-  .logo-wrapper{
-    display: none;
-  }
-  .logo-section{
-    width: 100%;
-    background-color: #c10c10;
-  }
-  .quick, .port{
-  font-size: 0.8rem;
-  }
-  
 }
-
-
-
 
 
 
@@ -1370,7 +1445,6 @@ background-color: #333 !important;
 
 /* Tablet Media Query */
 @media (max-width: 768px) {
-
   .carousel-inner .carousel-item .row {
     flex-direction: column;
   }
@@ -1400,8 +1474,13 @@ background-color: #333 !important;
   }
 
   .hero-text-1 h2{
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   }
+
+  .hero-text-1 h4{
+    font-size: 0.8rem;
+  }
+ 
  
 
 .carousel-3{
@@ -1430,6 +1509,10 @@ background-color: #333 !important;
   margin-left: 20px;
 }
 
+.hero-image-3{
+  margin-left: -2.5rem;
+
+}
 
 .customer-logos.slider {
   display: flex;
@@ -1453,7 +1536,19 @@ background-color: #333 !important;
   width: auto;
   height: auto;
 }
+.nav-menu {
+  display: none;
+  /* Hide the nav menu by default */
+}
 
+.nav-menu.active {
+  display: flex;
+  /* Show the nav menu when the active class is applied */
+  /* Add any additional styles you need */
+}
 
-
+.nav-menu-sm {
+  display: none;
+  /* Hide the small nav menu by default */
+}
 }

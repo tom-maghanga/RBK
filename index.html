@@ -17,7 +17,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="/node_modules/standalone-whatsapp-widget/dist/js/standalone-whatsapp-widget.min.js"></script>
     <script>
-          let isMenuActive = false; // Variable to track toggle state
+          let isMenuActive = false; // Variable to track toggle 
+          
+          const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+      hamburgerMenu.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
   const navMenu = document.querySelector('.nav-menu');
